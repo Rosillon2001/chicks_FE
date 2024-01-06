@@ -8,14 +8,36 @@ $chicks_dark_green: #39e29ed7;
 $chicks_blue_gray: #303141;
 $chicks_blue_outline: #3C455F;
 $chicks_blue: #4C6085;
+$chicks_blue_light: #5762d5;
+$chicks_blue_dark: #454da8;
 $chicks_blue_transparent: rgba(76, 96, 133, 0.2);
 $chicks_cream: #C3C3C9;
+$chicks_gray: #3f414d;
+$chicks_card_background: #34384b;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: OpenSans;
+
+  // Scrollbar for chrome compatibility
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: $chicks_blue_gray;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $chicks_blue_light;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: $chicks_blue;
+  }
+
+  // Scrollbar for firefox compatibility
+  scrollbar-color: $chicks_blue_light $chicks_blue_gray;
 }
 
 html, body {

@@ -6,11 +6,13 @@ import { DataService } from '../../mock/data.service';
 import { Item } from '../../mock/interfaces/item.interface';
 // NgIconComponent
 import { NgIconComponent } from '@ng-icons/core';
+// Item Component
+import { ItemComponent } from '../item/item.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, NgIconComponent],
+  imports: [CommonModule, NgIconComponent, ItemComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

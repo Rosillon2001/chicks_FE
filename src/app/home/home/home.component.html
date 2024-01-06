@@ -1,7 +1,7 @@
 <div id="home_wrapper">
 
   <!-- Title -->
-  <h1>LoL Items</h1>
+  <h1>League of Legends Items</h1>
 
   <!-- Inputs -->
   <div id="inputs_wrapper">
@@ -53,10 +53,28 @@
         <ng-icon name="featherChevronDown" class="right_icon transparent_container" size="14px"></ng-icon>
       </div>
     </section>
+    <!-- Rendering the items with the item component -->
     <div id="item_container">
-      <div *ngFor="let item of items_mock" class="item">
-
+      <div *ngFor="let item of items" class="item">
+        <app-item [item]="item" class="item_display"></app-item>
       </div>
     </div>
+    <!-- /End of icon rendering -->
+    <!-- Paginator -->
+    <div id="paginator_wrapper">
+      <div id="paginator">
+        <ng-icon name="featherChevronLeft" class="paginator_icon" size="16px" strokeWidth="2.5px"></ng-icon>
+        <span class="paginator_btn active">1</span>
+        <span class="paginator_btn">2</span>
+        <span class="paginator_btn">3</span>
+        <span class="paginator_btn">4</span>
+        <span class="paginator_btn">...</span>
+        <span class="paginator_btn">11</span>
+        <ng-icon name="featherChevronRight" class="paginator_icon" size="16px" strokeWidth="2.5px"></ng-icon>
+      </div>
+    </div>
+    <!-- /Paginator -->
   </div>
+  <!-- /Items -->
 </div>
+<!-- /Home -->

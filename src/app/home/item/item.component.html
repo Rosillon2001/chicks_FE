@@ -1,1 +1,90 @@
-<p>item works!</p>
+<!-- -------------------------------- Item stock, sale and qtty selection info section -------------------------- -->
+<div id="sale_stock_qtty">
+  <!-- On sale and stock vertical block -->
+  <div id="sale_stock">
+    <!-- On sale -->
+    <div id="on_sale" *ngIf="item.on_sale.on_sale">
+      <ng-icon name="featherCircle" color="#39E29D" size="6px" strokeWidth="5px" id="sale_icon"></ng-icon>
+      <span>On Sale</span>
+    </div>
+    <!-- Stock Chip -->
+    <div id="stock_chip" *ngIf="item.in_stock">
+      <span>In stock</span>
+    </div>
+    <!-- Out of Stock Chip -->
+    <div id="out_stock_chip" *ngIf="!item.in_stock">
+      <span>Out of stock</span>
+    </div>
+  </div>
+
+  <!-- Qtty selection section -->
+  <div id="qtty_section">
+    <!-- Qtty input -->
+    <div id="qtty_container">
+      <input class="transparent_container qtty_input" id="qtty_input" type="text" placeholder="1" value="1"
+      [disabled]="!item.in_stock">
+    </div>
+    <!-- Qtty btns -->
+    <div class="transparent_container" id="qtty_btns">
+      <ng-icon name="featherChevronUp" color="white" size="10px" class="chevron_btn"></ng-icon>
+      <ng-icon name="featherChevronDown" color="white" size="10px" class="chevron_btn"></ng-icon>
+    </div>
+  </div>
+</div>
+<!-- /----------------------------- End item stock, sale and qtty -------------------------------------- -->
+
+<!-- ---------------------------------- Item Image ------------------------------------------------- -->
+<div id="item_image">
+  <img [src]="item.image" alt="Item Image">
+</div>
+<!-- /-------------------------------- End item image ---------------------------------------------- -->
+
+<!-- ---------------------------------- Item name and category chip ------------------------------------- -->
+<div id="item_name_category">
+  <!-- Item name -->
+  <span id="item_name">{{item.name}}</span>
+  <!-- Category chip -->
+  <div id="category_chip">
+    <span *ngIf="item.category === 'Starter'">S</span>
+    <span *ngIf="item.category === 'Consumable'">C</span>
+    <span *ngIf="item.category === 'Legendary'">L</span>
+    <span *ngIf="item.category === 'Mythic'">M</span>
+  </div>
+</div>
+<!-- /-------------------------------- End item name and category chip -------------------------------- -->
+
+<!-- ---------------------------------- Item price and discount ----------------------------------------- -->
+<div id="item_price_discount">
+  <!-- Item price -->
+  <span id="item_price">${{item.price | number: '1.2-2'}}</span>
+  <!-- Prev price -->
+  <span id="prev_price_container" *ngIf="item.on_sale.on_sale">
+    <!-- Wrapping the price with another span to strikethroug with a color different of the text -->
+    <span id="strikethrough">
+      <span id="prev_price">
+        ${{item.on_sale?.prev_price | number: '1.2-2'}}
+      </span>
+    </span>
+  </span>
+</div>
+<!-- /-------------------------------- End item price and discount -------------------------------------- -->
+
+<!-- ------------------------------------ Item Description ---------------------------------------------- -->
+<div id="item_description">
+  <span id="description">{{item.description}}</span>
+</div>
+<!-- /---------------------------------- End item description ------------------------------------------- -->
+
+<!-- ------------------------------------ Buttons ------------------------------------------------------- -->
+<div id="button_container">
+  <!-- Details button -->
+  <button id="details_btn">Details</button>
+  <!-- Add to cart button -->
+  <button id="add_to_cart_btn" [disabled]="!item.in_stock">
+    <span>Add</span>
+    <div id="cart_bg">
+      <ng-icon name="featherShoppingCart" color="white" size="14px" id="cart_icon"></ng-icon>
+    </div>
+  </button>
+</div>
+<!-- /----------------------------------- End of buttons -------------------------------------------------- -->

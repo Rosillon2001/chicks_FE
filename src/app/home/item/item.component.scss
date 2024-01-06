@@ -1,0 +1,266 @@
+@import '../../../styles.scss';
+
+* {
+  color: white;
+}
+// ---------------- SALE -----------------
+#sale_stock_qtty {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+
+  #sale_stock {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  #on_sale {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 4px;
+    font-size: 8px;
+    text-transform: uppercase;
+
+    #sale_icon {
+      display: flex;
+    }
+  }
+
+  // ---------------- STOCK -----------------
+  #stock_chip {
+    border: solid 1px $chicks_dark_green;
+    border-radius: 1px;
+    padding: 0px 6px 1px 6px;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    span {
+      font-size: 9px;
+      color: $chicks_dark_green;
+    }
+  }
+  // ---------------- OUT OF STOCK -----------------
+  #out_stock_chip {
+    border: solid 1px red;
+    border-radius: 1px;
+    padding: 0px 6px 1px 6px;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    span {
+      font-size: 9px;
+      color: red;
+    }
+  }
+
+
+  // ---------------- QTTY -----------------
+  #qtty_section {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    #qtty_container {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      .qtty_input {
+        outline: none;
+        border: none;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        padding: 6px 0px 6px 6px;
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+      }
+    }
+
+    #qtty_btns {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      padding: 0px 4px 0px 4px;
+      height: 30px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+
+      .chevron_btn {
+        cursor: pointer;
+      }
+      .chevron_btn:hover {
+        background-color: $chicks_blue;
+      }
+    }
+  }
+
+}
+// ---------------- SALE, STOCK N QTTY END -----------------
+
+// ---------------- Item Image -----------------
+#item_image {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
+  }
+}
+// ---------------- Item Image END -----------------
+
+// ---------------- Item name and category -----------------
+#item_name_category {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 6px;
+
+  #item_name {
+    display: inline-block;
+    height: 16px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #category_chip {
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    border: solid 1px $chicks_green;
+    border-radius: 16px;
+    padding: 0px 4px;
+
+    span {
+      color: $chicks_green;
+      font-weight: 600;
+    }
+  }
+  #category_chip:hover {
+    cursor: pointer;
+  }
+}
+// ---------------- Item name and category END -----------------
+
+// ---------------- Item price and discount -----------------
+#item_price_discount {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+
+  #item_price {
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  #prev_price_container {
+
+    #strikethrough {
+      display: flex;
+      text-decoration: line-through;
+      color: red;
+
+      #prev_price {
+        font-size: 10px;
+        color: $chicks_cream;
+      }
+    }
+  }
+}
+// ---------------- Item price and discount END -----------------
+
+// ---------------- Item description -----------------
+#item_description {
+  font-size: 9px;
+  opacity: 0.6;
+  width: 100%;
+  height: 30px;
+  span {
+    // Breaking the word on second line
+    display: inline;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+  }
+}
+// ---------------- Item description END -----------------
+
+// ---------------- Item buttons -----------------
+#button_container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  gap: 8px;
+
+  #details_btn {
+    width: 50%;
+    background-color: $chicks_gray;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 8px 14px 8px 14px;
+    font-size: 11px;
+    opacity: 0.5;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  #details_btn:hover {
+    background-color: $chicks_blue;
+  }
+
+  #add_to_cart_btn {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: $chicks_blue_light;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 2px 8px 2px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    gap: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    #cart_bg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      height: 30px;
+      width: 30px;
+      padding: 2px;
+      background-color: $chicks_blue_dark;
+    }
+  }
+  #add_to_cart_btn:hover {
+    background-color: $chicks_blue;
+    > #cart_bg {
+      background-color: $chicks_blue;
+    }
+  }
+}
