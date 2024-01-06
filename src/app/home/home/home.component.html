@@ -1,0 +1,62 @@
+<div id="home_wrapper">
+
+  <!-- Title -->
+  <h1>LoL Items</h1>
+
+  <!-- Inputs -->
+  <div id="inputs_wrapper">
+    <!-- select with icon inside -->
+    <div class="input_container transparent_container" id="game">
+      <img src="../../../assets/Other/sword.png" class="left_icon transparent_container"/>
+      <input type="text" placeholder="Select a game" class="input_field transparent_container"/>
+      <ng-icon name="featherChevronDown" class="right_icon transparent_container" size="14px"></ng-icon>
+    </div>
+    <!-- search input -->
+    <div class="input_container transparent_container" id="search">
+      <ng-icon name="featherSearch" class="left_icon transparent_container" size="14px"></ng-icon>
+      <input type="text" placeholder="Search" class="input_field transparent_container"/>
+    </div>
+    <!-- Filters -->
+    <div class="input_container transparent_container" id="filters">
+      <!-- Price -->
+      <ng-icon name="featherDollarSign" color="#39E29D" class="left_icon transparent_container" size="16px"></ng-icon>
+      <div class="filter_labels transparent_container" id="price_filter">
+        <span>Price</span>
+        <span>All</span>
+      </div>
+      <ng-icon name="featherChevronDown" class="separator_icon transparent_container" size="14px"></ng-icon>
+      <!-- Item type -->
+      <ng-icon name="featherFeather" color="#39E29D" class="left_icon transparent_container" size="16px"></ng-icon>
+      <div class="filter_labels transparent_container" id="type_filter">
+        <span>Item Type</span>
+        <span>All</span>
+      </div>
+      <ng-icon name="featherChevronDown" class="right_icon transparent_container" size="14px"></ng-icon>
+    </div>
+    <!-- /Filters -->
+  </div>
+  <!-- /Inputs -->
+
+
+  <!-- Items -->
+  <div id="item_wrapper">
+    <section id="items_options">
+      <!-- Paginator info -->
+      <span id="paginator_info">Showing 15 - from 125</span>
+      <!-- Sort by -->
+      <div class="input_container transparent_container">
+        <ng-icon name="featherSliders" class="left_icon transparent_container" size="14px" color="#39E29D"></ng-icon>
+        <div class="filter_labels transparent_container" id="sort_by">
+          <span>Sort By</span>
+          <span>Featured</span>
+        </div>
+        <ng-icon name="featherChevronDown" class="right_icon transparent_container" size="14px"></ng-icon>
+      </div>
+    </section>
+    <div id="item_container">
+      <div *ngFor="let item of items_mock" class="item">
+
+      </div>
+    </div>
+  </div>
+</div>

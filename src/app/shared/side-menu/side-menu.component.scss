@@ -1,0 +1,72 @@
+@import '../../../styles.scss';
+
+* {
+  color: white;
+}
+
+#side_header {
+  height: 64px !important;
+  width: 100%;
+  padding: 0px 12px 0px 12px;
+  background-color: $chicks_blue_gray;
+  border-bottom: 2px solid $chicks_blue;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+
+  #close_x {
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    top: 4px;
+  }
+}
+// /Side Header
+
+// Menu Options
+#options_wrapper {
+  display: flex;
+  flex-flow: column;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+
+    div:hover {
+      background-color: $chicks_blue;
+      border-radius: 4px;
+    }
+
+    li {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+      cursor: pointer;
+      padding: 12px 12px 0px 12px;
+
+      span {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+// /Menu Options
+
+// Horizontal Line
+#horizontal_line {
+  width: 100%;
+  border-bottom: solid 1px $chicks_blue_outline;
+  margin-top: 10px;
+}

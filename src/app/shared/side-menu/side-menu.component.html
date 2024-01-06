@@ -1,0 +1,21 @@
+<header id="side_header">
+  <ng-icon name="featherX" size="20px" color="white" strokeWidth="3px" id="close_x"
+  (click)="openSideMenu(false)"></ng-icon>
+  <span>MENU</span>
+</header>
+<div id="options_wrapper">
+  <ul id="options_list">
+    <div *ngFor="let item of menu_data" id="option_container">
+      <li>
+        <a>
+          <span>
+            {{item.option}}
+          </span>
+        </a>
+        <ng-icon name="featherChevronDown" size="16px" class="chevron_down"></ng-icon>
+      </li>
+      <!-- horizontal line -->
+      <div id="horizontal_line"></div>
+    </div>
+  </ul>
+</div>

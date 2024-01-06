@@ -1,0 +1,55 @@
+<header>
+  <!-- Logo and burger menu section -->
+  <app-side-menu class="side_menu" [ngStyle]="{'display': open_side ? 'flex':'none'}"
+  (newOpenState)="openSideMenu()"></app-side-menu>
+  <section id="section_1">
+    <div id="hamburger">
+      <ng-icon name="featherMenu" size="20px" strokeWidth="2px" color="#C3C3C9"
+      (click)="openSideMenu()"></ng-icon>
+    </div>
+    <img src="../../../assets/chicks-logo-large.svg" alt="Chicks Logo" id="full_logo"/>
+    <div id="vert_line"></div>
+  </section>
+
+  <!-- Menu section -->
+  <section id="section_2">
+    <ul id="list">
+      <li *ngFor="let item of menu_data">
+        <a>
+          <span>
+            {{item.option}}
+          </span>
+        </a>
+        <ng-icon name="featherChevronDown" size="12px" class="chevron_down"></ng-icon>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Currency, cart and sign in button -->
+  <section id="section_3">
+    <div id="shop_n_currency">
+      <!-- Currency -->
+      <a>
+        <span>
+          USD
+        </span>
+        <ng-icon name="featherChevronDown" size="12px" class="chevron_down"></ng-icon>
+      </a>
+      <!-- Cart -->
+      <a>
+        <ng-icon name="featherShoppingCart" size="14px" class="shopping_cart"></ng-icon>
+        <span>
+          CART ({{cart_count}})
+        </span>
+      </a>
+    </div>
+    <button class="green_button">
+      <span>
+        SIGN IN
+      </span>
+      <ng-icon name="featherUser" size="14px" strokeWidth="3px" class="chevron_down"></ng-icon>
+    </button>
+  </section>
+  <!-- <app-side-menu></app-side-menu> -->
+
+</header>
