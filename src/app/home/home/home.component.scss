@@ -257,11 +257,10 @@
 }
 
 // ---------------------------------------- Media queries for the item container ----------------------------------------
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 500px){
   #home_wrapper {
     padding: 2vh 4vw 2vh 4vw !important;
   }
-  // Item Container
   #item_wrapper{
     padding: 2vh 2vw 2vh 2vw !important;
     #item_container {
@@ -289,16 +288,47 @@
   }
 }
 
+@media only screen and (min-width: 500px) and (max-width: 650px) {
+  #home_wrapper {
+    padding: 2vh 4vw 2vh 4vw !important;
+  }
+  // Item Container
+  #item_wrapper{
+    padding: 2vh calc(2vw - 16px) 2vh 2vw !important;
+    #item_container {
+      padding: 2vh 2vw 2vh 2vw !important;
+      .item {
+        width: calc(50% - 16px) !important;
+        height: 250px;
+      }
+    }
+    #items_options {
+      display: flex;
+      flex-flow: column !important;
+      width: calc(100% - 32px) !important;
+    }
+    #paginator_info {
+      display: none !important;
+    }
+    .input_container{
+      width: 100% !important;
+      margin-left: 16px;
+      #sort_by {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 650px) and (max-width: 850px) {
   #home_wrapper {
     padding: 2vh 3vw 2vh 3vw !important;
     #item_wrapper {
-      padding: 2vh 2vw 2vh 2vw !important;
+      padding: 2vh calc(2vw - 16px) 2vh 2vw !important;
         // Item Container
         #item_container {
-          // padding: 2vh 2vw 2vh 2vw !important;
           .item {
-            width: calc(33% - 16px) !important;
+            width: calc(50% - 16px) !important;
             height: 250px;
           }
         }
@@ -310,7 +340,7 @@
   #home_wrapper {
     padding: 2vh 3vw 2vh 3vw !important;
     #item_wrapper {
-      padding: 2vh 2vw 2vh 2vw !important;
+      padding: 2vh calc(2vw - 16px) 2vh 2vw !important;
         // Item Container
         #item_container {
           // padding: 2vh 2vw 2vh 2vw !important;
@@ -318,6 +348,9 @@
             width: calc(33% - 16px) !important;
             height: 250px;
           }
+        }
+        #items_options {
+          width: calc(100% - 22px) !important;
         }
     }
   }

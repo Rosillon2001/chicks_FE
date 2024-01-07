@@ -217,7 +217,9 @@
 }
 
 hr.solid {
-  border-top: solid 2px $chicks_blue;
+  // Chrome Compatibility
+  border: transparent;
+  border-top: solid 2px $chicks_blue !important;
   width: calc(100% - 34vw);
   opacity: 0.6;
   color: transparent;
