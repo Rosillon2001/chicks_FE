@@ -58,7 +58,7 @@ ng serve -o
 
 # Features
 ChciksGold frontend mock app. Features:
-- League of Legends assets.
+- League of Legends and other custom assets.
 - Mock data with respective interfaces for data modelling.
 - A service that provides the menu and items data.
 - A responsive design. Including a responsive side menu, that can be displayed when the screen size is reduced, the burger menu icon appears and its clicked.
