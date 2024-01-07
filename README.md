@@ -63,6 +63,7 @@ ChciksGold frontend mock app. Features:
 - A service that provides the menu and items data.
 - A responsive design. Including a responsive side menu, that can be displayed when the screen size is reduced, the burger menu icon appears and its clicked.
 - Conditional rendering of the items card component depending on certain values suchs as on_sale flag.
+- Data sharing between components.
 
 <br>
 

@@ -13,7 +13,8 @@ export const ItemData: Item[] = [
     category: 'Starter',
     quantity: 1,
     on_sale: {
-      on_sale: false
+      on_sale: true,
+      prev_price: 400
     },
     in_stock: true
   },
@@ -26,7 +27,8 @@ export const ItemData: Item[] = [
     category: 'Starter',
     quantity: 1,
     on_sale: {
-      on_sale: false
+      on_sale: true,
+      prev_price: 450
     },
     in_stock: true
   },
@@ -52,7 +54,7 @@ export const ItemData: Item[] = [
     category: 'Starter',
     quantity: 1,
     on_sale: {
-      on_sale: false,
+      on_sale: true,
       prev_price: 450
     },
     in_stock: true
@@ -99,13 +101,14 @@ export const ItemData: Item[] = [
   {
     id: 8,
     name: 'Blade of the Ruined King',
-    price: 3300,
+    price: 3000,
     description: 'Anti-tank item.',
     image: '../../../assets/items/Blade_of_the_Ruined_King_item.png',
     category: 'Legendary',
     quantity: 1,
     on_sale: {
-      on_sale: false
+      on_sale: true,
+      prev_price: 3400
     },
     in_stock: true
   },

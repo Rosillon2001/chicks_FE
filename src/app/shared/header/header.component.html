@@ -1,7 +1,8 @@
 <header>
-  <!-- Logo and burger menu section -->
+  <!-- Side menu -->
   <app-side-menu class="side_menu" [ngStyle]="{'display': open_side ? 'flex':'none'}"
   (newOpenState)="openSideMenu()"></app-side-menu>
+  <!-- Logo Section -->
   <section id="section_1">
     <div id="hamburger">
       <ng-icon name="featherMenu" size="20px" strokeWidth="2px" color="#C3C3C9"
@@ -50,6 +51,5 @@
       <ng-icon name="featherUser" size="14px" strokeWidth="3px" class="chevron_down"></ng-icon>
     </button>
   </section>
-  <!-- <app-side-menu></app-side-menu> -->
 
 </header>
