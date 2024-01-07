@@ -255,7 +255,12 @@
     // /Inputs Wrapper
   }
 }
-
+// ---------------------------------------- Paginator small screen breakpoint ----------------------------------------
+@media (max-width: 350px) {
+  .paginator_icon {
+    margin: 0 4px !important;
+  }
+}
 // ---------------------------------------- Media queries for the item container ----------------------------------------
 @media only screen and (max-width: 500px){
   #home_wrapper {
